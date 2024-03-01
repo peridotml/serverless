@@ -1,0 +1,11 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: whatisit
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/serverless-415915/whatisit:app
+          ports:
+            - containerPort: 3000
