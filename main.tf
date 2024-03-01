@@ -2,7 +2,6 @@ terraform {
   backend "gcs" {
     bucket      = "atlantis-demo"
     prefix      = "terraform"
-    access_token = ""
   }
 
   required_providers {
@@ -17,7 +16,7 @@ provider "google" {
   project = "serverless-415915"
   region  = "us-east1"
   zone    = "us-east1-b"
-  access_token = "" 
+  impersonate_service_account = terraform@serverless-415915.iam.gserviceaccount.com"
 }
 
 resource "null_resource" "example" {}
