@@ -33,12 +33,6 @@ resource "google_project_service" "containerregistry" {
   disable_on_destroy = false
 }
 
-resource "google_project_service" "containerregistry" {
-  service            = "containerregistry.googleapis.com"
-  disable_on_destroy = false
-}
-
-
 resource "google_container_cluster" "knative_cluster" {
   name     = "knative-cluster"
   location = "us-east1-b"
