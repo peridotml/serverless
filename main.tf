@@ -16,7 +16,6 @@ provider "google" {
   project = "serverless-415915"
   region  = "us-east1"
   zone    = "us-east1-b"
-  impersonate_service_account = terraform@serverless-415915.iam.gserviceaccount.com"
 }
 
 resource "null_resource" "example" {}
