@@ -40,7 +40,7 @@ resource "google_container_cluster" "knative_cluster" {
   min_master_version = "latest"
 
   node_config {
-    machine_type = "e2-small"
+    machine_type = "e2-micro"
     spot         = true
 
     oauth_scopes = [
